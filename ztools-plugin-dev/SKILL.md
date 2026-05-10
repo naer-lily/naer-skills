@@ -4,7 +4,6 @@ description: >-
   ZTools 插件开发全流程指南。覆盖架构理解、项目初始化、plugin.json 配置、
   插件 API 调用、调试与发布。当用户提及 ZTools、ztools 插件、uTools 平替
   开发时使用。
-agent_created: true
 ---
 
 # ZTools 插件开发
@@ -49,7 +48,7 @@ ztools publish                      # 发布（自动 fork + PR）
 
 | 模板 | 场景 |
 |---|---|
-| React + TypeScript + Vite | 需要 UI，熟悉 React（那尔さん推荐） |
+| React + TypeScript + Vite | 需要 UI，熟悉 React |
 | Vue + TypeScript + Vite | 需要 UI，熟悉 Vue 3 |
 | Preload Only (TypeScript) | 无界面插件 |
 
@@ -151,9 +150,8 @@ ztools publish
 - `CLAUDE.md`（~380 行）：按模块名搜索，如 `pluginManager`、`IPC`、`LMDB`
 - `publish-and-update.md`（~290 行）：搜索 `pull-contributions`、`CHANGELOG`、`422`
 
-## 对那尔さん的关键提示
+## 关键提示
 
-- React + TypeScript + Vite 模板与现有技能栈完美匹配
 - `resources/preload.js` 不经过 Vite 构建，修改需重启
 - 插件 .zpx 格式 = asar + gzip，构建命令 `npm run build` 自动输出
-- 追求排版品质时，插件 UI 完全可控（自定义 CSS/组件），无框架限制
+- 插件 UI 完全可控（自定义 CSS/组件），无框架限制
